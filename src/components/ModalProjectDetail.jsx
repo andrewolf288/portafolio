@@ -21,7 +21,7 @@ export default function ModalProjectDetail({ detail, onClose }) {
                     <img
                         src={detail.images[currentImage]}
                         alt={`Project image ${currentImage + 1}`}
-                        className="w-full h-96 object-cover"
+                        className="w-full min-h-60 transition duration-500 sm:h-full md:scale-100"
                     />
                     <button
                         onClick={handlePrev}
@@ -67,7 +67,7 @@ export default function ModalProjectDetail({ detail, onClose }) {
 
                     <div>
                         <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
-                            Features:
+                            Características:
                         </h3>
                         <ul className="list-disc ml-6 text-gray-600 dark:text-gray-400">
                             {detail.features.map((feature, index) => (

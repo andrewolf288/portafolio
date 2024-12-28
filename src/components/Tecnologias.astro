@@ -1,0 +1,60 @@
+---
+import Django from './icons/Django.astro'
+import JavaScript from './icons/JavaScript.astro'
+import Laravel from './icons/Laravel.astro'
+import Php from './icons/Php.astro'
+import React from './icons/React.astro'
+import Sqlserver from './icons/Sqlserver.astro'
+import Linux from './icons/Linux.astro'
+import Mysql from './icons/Mysql.astro'
+import Postgres from './icons/Postgres.astro'
+import Java from './icons/Java.astro'
+import Git from './icons/Git.astro'
+import Kotlin from './icons/Kotlin.astro'
+import Angular from './icons/Angular.astro'
+import Tailwind from './icons/Tailwind.astro'
+import Bootstrap from './icons/Bootstrap.astro'
+import Html from './icons/Html.astro'
+
+const tecnologias = [
+    {name: 'React', icon: React, level: 'Avanzado'},
+    {name: 'Angular', icon: Angular, level: 'Avanzado'},
+    {name: 'JavaScript', icon: JavaScript, level: 'Avanzado'},
+    {name: 'HTML', icon: Html, level: 'Avanzado'},
+    {name: 'TailWind CSS', icon: Tailwind, level: 'Intermedio'},
+    {name: 'Bootstrap', icon: Bootstrap, level: 'Avanzado'},
+    {name: 'Laravel', icon: Laravel, level: 'Avanzado'},
+    {name: 'PHP', icon: Php, level: 'Avanzado'},
+    {name: 'Django',  icon: Django, level: 'Intermedio'},
+    {name: 'SQL Server', icon: Sqlserver, level: 'Avanzado'},
+    {name: 'MySQL', icon: Mysql, level: 'Intermedio'},
+    {name: 'PostgreSQL', icon: Postgres, level: 'Intermedio'},
+    {name: 'Java', icon: Java, level: 'Intermedio'},
+    {name: 'Kotlin', icon: Kotlin, level: 'Intermedio'},
+    {name: 'Linux', icon: Linux, level: 'Intermedio'},
+    {name: 'Git', icon: Git, level: 'Intermedio'},
+]
+---
+<section id="tecnologias">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+        {tecnologias.map((tech) => (
+          <div class="flex flex-col items-center shadow-md rounded-lg p-4">
+            <tech.icon class="size-20"/>
+            <h3 class="text-lg font-semibold text-gray-400">{tech.name}</h3>
+            <p
+              class={`mt-2 px-2 py-1 rounded-full text-sm font-medium ${
+                tech.level === 'Avanzado'
+                  ? 'bg-green-200 text-green-800'
+                  : tech.level === 'Intermedio'
+                  ? 'bg-yellow-200 text-yellow-800'
+                  : 'bg-red-200 text-red-800'
+              }`}
+            >
+              {tech.level}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>

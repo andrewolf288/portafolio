@@ -1,11 +1,4 @@
-import { useEffect, useState } from "react";
-import BootstrapReact from "./icons/react/BootstrapReact";
-import DjangoReact from "./icons/react/DjangoReact";
-import JavaScriptReact from "./icons/react/JavaScriptReact";
-import LaravelReact from "./icons/react/LaravelReact";
-import PhpReact from "./icons/react/PhpReact";
-import ReactReact from "./icons/react/ReactReact";
-import TailwindReact from "./icons/react/TailwindReact";
+import { useState } from "react";
 import ModalProjectDetail from "./ModalProjectDetail";
 
 // TAGS de iconos
@@ -95,7 +88,6 @@ const PROJECTS = [
       "Gestión de certificaciones de cisternas por supervisores",
       "Exportación de certificados en formato PDF alineados a estándares de calidad",
       "Gestión de pagos con integración con sistema de facturación",
-      "Exportación de PDF de cotización",
       "Integración con Moodle"
     ],
     images: [
@@ -111,12 +103,12 @@ const PROJECTS = [
   {
     title: "FAMAI - Sistema ERP para empresa de mantenimiento industrial y minero",
     description:
-      "Sistema para la gestión lógistica y mantenimiento integrado con otros sistemas como SAP Bussines One. Creada con Laravel, Vanilla JS y Bootstrap.",
+      "Sistema para la gestión lógistica y mantenimiento integrado con otros sistemas como SAP Business One. Creada con Laravel, Vanilla JS y Bootstrap.",
     detail: true,
     features: [
       "Gestión de ordenes de trabajo",
       "Exportación de orden de trabajao en PDF alineado a estándar ISO",
-      "Integración con SAP Bussines One y otros sistemas a través de procedimientos almacenados",
+      "Integración con SAP Business One y otros sistemas a través de procedimientos almacenados",
       "Gestión de usuarios y roles (autorización y autenticación)",
       "Manejo de Jobs para automatización de integraciones",
       "Gestión e integración de maestros del sistema"
@@ -154,12 +146,7 @@ const PROJECTS = [
 export default function Projects() {
   const [detail, setDetail] = useState(null)
 
-  useEffect(() => {
-    console.log("detail")
-  }, [])
-
   const handleClickDetail = (index) => {
-    console.log(PROJECTS[index])
     setDetail(PROJECTS[index])
   }
 
