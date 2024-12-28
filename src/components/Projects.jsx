@@ -167,7 +167,7 @@ export default function Projects() {
                     alt="Recién llegado vs 5 años en Nueva Zelanda"
                     className="object-cover object-top w-full min-h-60 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
                     loading="lazy"
-                    src={images[0]}
+                    src={`/portafolio${images[0]}`}
                   />
                 </div>
               </div>
