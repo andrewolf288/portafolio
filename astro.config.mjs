@@ -8,5 +8,5 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [tailwind(), robotsTxt(), react()],
   site: 'https://andrewolf288.github.io',
-  base: 'portafolio'
+  base: '/portafolio/'
 });
