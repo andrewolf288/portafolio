@@ -19,7 +19,7 @@ export default function ModalProjectDetail({ detail, onClose }) {
                 {/* Carousel */}
                 <div className="relative w-full md:w-1/2 flex items-center justify-center bg-gray-200 dark:bg-gray-700 rounded-t-lg md:rounded-t-none md:rounded-l-lg overflow-hidden">
                     <img
-                        src={detail.images[currentImage]}
+                        src={`/portafolio${detail.images[currentImage]}`}
                         alt={`Project image ${currentImage + 1}`}
                         className="w-full min-h-60 transition duration-500 sm:h-full md:scale-100"
                     />
